@@ -1,0 +1,16 @@
+SUMA Y RESTA
+
+{En este programa se selecciona la opción de 
+sumar o restar 2 números, y se calcula su resultado}
+
+{menu es un entero y a,b,resultado son reales}
+
+1. Escribir "1. Sumar 2. Restar"
+2. Leer menu
+3. Si menu igual
+  3.1 Valor 1: Hacer resultado ← a + b
+    3.1.1 Escribir resultado
+  3.2 Valor 2: Hacer resultado ← a - b
+    3.2.1 Escribir resultado
+  3.3 De otra forma: Escribrir "Opción inválida"
+4. Fin si
