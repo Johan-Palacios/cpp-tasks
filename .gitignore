@@ -1,5 +1,8 @@
+# Buils
 */build
+*/build/*
 */.cache
+*/.cache/*
 
  Prerequisites
 *.d
@@ -34,3 +37,4 @@
 *.
 *.out
 *.app
+main
