@@ -1,58 +1,61 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
 
 int main(int argc, char *argv[]) {
-  string nombre = "Johan Palacios";
-  cout << "El largo de la cadena es: " << nombre.length() << "\n";
 
-  string otroNombre = "Pricila Barielle";
-  // Append
-  nombre.append(otroNombre, 4, 2);
-  cout << "El nombre 1 es ahora: " << nombre << "\n";
+  // Definir un string de nombre name
+  std::string name = "Pricila Barielle";
+  std::string anotherName = "Rias Gremory";
 
-  // Erase
-  nombre.erase(4, 9);
-  cout << "El nombre 1 es ahora: " << nombre << "\n";
+  // Para saber el largo de una cadena se usa el metodo length()
+  std::cout << "length " << name.length() << "\n";
 
-  // Replace
-  nombre.replace(0, 2, "Hola :D ");
-  cout << "El nombre 1 es ahora: " << nombre << "\n";
+  // Agregar un string,  indicando el inicio del string y el final con su indice
+  name.append(anotherName, 4, 2);
+  std::cout << "name es = " << name << "\n";
 
-  // Insert
-  nombre.insert(8, "Emanuel ");
-  cout << "El nombre 1 es ahora: " << nombre << "\n";
+  // Permite borrar un rango del string, con un indice de inicio y fin
+  name.erase(4, 9);
+  std::cout << "El name es ahora: " << name << "\n";
+
+  // Permite remplazar en un rango un string
+  name.replace(0, 2, "Hola :D ");
+  std::cout << "El name es ahora: " << name << "\n";
+
+  // permite insertar un string en una posición
+  name.insert(8, "Emanuel ");
+  std::cout << "El name es ahora: " << name << "\n";
 
   // Extracción de subcadena
-  string subcadena;
-  subcadena = nombre.substr(0, 8);
-  cout << "La subcadena es: " << subcadena << "\n";
+  std::string subcadena;
+  subcadena = name.substr(0, 8);
+  std::cout << "La subcadena es: " << subcadena << "\n";
 
   // Assign
-  nombre.assign(otroNombre, 0, 7);
-  cout << "El nombre 1 es ahora: " << nombre << "\n";
+  name.assign(anotherName, 0, 7);
+  std::cout << "El name es ahora: " << name << "\n";
 
   // Swap
-  nombre.swap(otroNombre);
-  cout << "El nombre 1 es ahora: " << nombre << "\n";
+  name.swap(anotherName);
+  std::cout << "El name es ahora: " << name << "\n";
 
   // Find
-  bool valor = nombre.find("Pricila");
+  bool valor = name.find("Pricila");
   if (valor)
-    cout << "Valor no encontrado\n";
+    std::cout << "Valor no encontrado\n";
   else
-    cout << "Se encontro subcadena\n";
+    std::cout << "Se encontro subcadena\n";
 
   // Compare
-  int comparation = nombre.compare(otroNombre);
+  int comparation = name.compare(anotherName);
   if (comparation == 0)
-    cout << "Iguales\n";
+    std::cout << "Iguales\n";
   else
-    cout << "No Iguales\n";
+    std::cout << "No Iguales\n";
 
   // Lectura de cadenas
-  getline(cin, nombre);
-  cout << nombre << "\n";
+  getline(std::cin, name);
+  std::cout << name << "\n";
   return 0;
 }

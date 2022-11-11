@@ -1,18 +1,16 @@
-#include <array>
 #include <iostream>
-#include <string>
+
+int factorial(int n) {
+  if (n > 1)
+    // Recursividad, se llama la función a sí misma durante su ejecución
+    return n * factorial(n - 1);
+  else
+    return 1;
+}
 
 int main(int argc, char *argv[]) {
-  struct persona {
-    std::string nombre;
-    int edad;
-    float altura;
-  };
-  std::array<persona, 2> personas = {
-      {{"Emilia Luginica", 18, 1.60}, {"Rem", 20, 1.64}}};
-  for (const auto &individuo : personas) {
-    std::cout << "Nombre: " << individuo.nombre << " Edad: " << individuo.edad
-              << " Altura: " << individuo.altura << "\n";
-  }
+  int number = 4;
+  // Se usa la fución
+  factorial(number);
   return 0;
 }
